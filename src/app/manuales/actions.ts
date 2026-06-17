@@ -16,14 +16,14 @@ export async function createManual(formData: FormData) {
   const path = `${Date.now()}-${safeName}`;
 
   const { error: uploadError } = await supabase.storage
-    .from("manuals")
+    .from("Manuales")
     .upload(path, file, { contentType: file.type || "application/pdf" });
 
   if (uploadError) {
     return { error: uploadError.message };
   }
 
-  const { data: publicUrlData } = supabase.storage.from("manuals").getPublicUrl(path);
+  const { data: publicUrlData } = supabase.storage.from("Manuales").getPublicUrl(path);
 
   const { error: insertError } = await supabase.from("manuals").insert({
     title: formData.get("title") as string,
