@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { LayoutDashboard, Building2, BookOpen, CalendarClock, Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const links = [
+export const NAV_LINKS = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/instalaciones", label: "Instalaciones", icon: Building2 },
   { href: "/manuales", label: "Manuales", icon: BookOpen },
@@ -28,7 +28,7 @@ export function SidebarNav() {
         </span>
       </div>
       <nav className="flex flex-col gap-1 px-3">
-        {links.map((link) => {
+        {NAV_LINKS.map((link) => {
           const isActive =
             link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
           const Icon = link.icon;

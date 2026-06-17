@@ -2,6 +2,7 @@ import { LogOut } from "lucide-react";
 import { logout } from "@/app/login/actions";
 import { Button } from "@/components/ui/button";
 import { SidebarNav } from "@/components/sidebar-nav";
+import { MobileNav } from "@/components/mobile-nav";
 import { BackButton } from "@/components/back-button";
 
 export function AppShell({
@@ -27,8 +28,11 @@ export function AppShell({
             </form>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-8">{children}</main>
+        <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-8 pb-20 sm:pb-8">
+          {children}
+        </main>
       </div>
+      <MobileNav />
     </div>
   );
 }
