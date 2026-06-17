@@ -92,6 +92,19 @@ export function NewEventDialog({
               <Label htmlFor="description">Descripción</Label>
               <Textarea id="description" name="description" rows={3} />
             </div>
+            <div className="space-y-2 rounded-md border border-dashed p-3">
+              <Label htmlFor="new_next_due_date">
+                Actualizar próxima revisión (opcional)
+              </Label>
+              <Input id="new_next_due_date" name="new_next_due_date" type="date" />
+              <p className="text-xs text-muted-foreground">
+                Si rellenas esto, el equipo se quitará de los avisos hasta esa fecha.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="photos">Fotos (opcional)</Label>
+              <Input id="photos" name="photos" type="file" accept="image/*" multiple capture="environment" />
+            </div>
           </div>
           <DialogFooter>
             <Button type="submit" disabled={pending}>

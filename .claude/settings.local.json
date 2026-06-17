@@ -3,7 +3,8 @@
     "allow": [
       "Read(//d/TAL VEZ/**)",
       "Bash(python -c ' *)",
-      "Bash(find \"C:\\\\Users\\\\ramon\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\6ee5ee4c-0e7b-4656-8cba-455adc47e437\\\\c94ad347-b11e-4e81-a402-fa9d5c37b09a\\\\skills\\\\xlsx\" -iname \"*extract*\")"
+      "Bash(find \"C:\\\\Users\\\\ramon\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\6ee5ee4c-0e7b-4656-8cba-455adc47e437\\\\c94ad347-b11e-4e81-a402-fa9d5c37b09a\\\\skills\\\\xlsx\" -iname \"*extract*\")",
+      "Bash(ls \"C:\\\\Users\\\\ramon\\\\OneDrive\\\\Escritorio\")"
     ]
   }
 }

@@ -7,6 +7,7 @@ export type Building = {
   address: string | null;
   notes: string | null;
   created_at: string;
+  updated_at: string;
 };
 
 export type Asset = {
@@ -25,6 +26,7 @@ export type Asset = {
   status: string;
   attributes: Record<string, unknown>;
   created_at: string;
+  updated_at: string;
 };
 
 export type Manual = {
@@ -36,6 +38,7 @@ export type Manual = {
   file_url: string;
   notes: string | null;
   created_at: string;
+  updated_at: string;
 };
 
 export type MaintenanceEvent = {

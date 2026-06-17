@@ -1,3 +1,5 @@
+import { Flame, Droplet, Radio, Cpu, DoorClosed, type LucideIcon } from "lucide-react";
+
 export type DueState = "vencido" | "aviso" | "ok" | "sin_fecha";
 
 const WARNING_WINDOW_DAYS = 30;
@@ -38,4 +40,20 @@ export const ASSET_TYPE_LABEL: Record<string, string> = {
   detector: "Detector",
   central: "Central de incendios",
   compuerta: "Compuerta cortafuego",
+};
+
+export const ASSET_TYPE_ICON: Record<string, LucideIcon> = {
+  extintor: Flame,
+  bie: Droplet,
+  detector: Radio,
+  central: Cpu,
+  compuerta: DoorClosed,
+};
+
+export const ASSET_TYPE_COLOR: Record<string, string> = {
+  extintor: "text-orange-600 bg-orange-100 dark:bg-orange-950",
+  bie: "text-blue-600 bg-blue-100 dark:bg-blue-950",
+  detector: "text-violet-600 bg-violet-100 dark:bg-violet-950",
+  central: "text-slate-600 bg-slate-100 dark:bg-slate-800",
+  compuerta: "text-amber-600 bg-amber-100 dark:bg-amber-950",
 };
